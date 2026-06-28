@@ -832,26 +832,7 @@
 
     <nav class="pagination" id="pagination"></nav>
 
-    <section class="help-box">
-      <h3>Úprava cien a fotiek</h3>
-      <p>
-        Ceny meníš dole v poli <strong>vehicles</strong> cez <code>price</code>.
-        Fotku meníš cez <code>image</code>. Nové auto pridáš skopírovaním jedného objektu.
-      </p>
-      <pre><code>{
-  code: "LSPD-094",
-  department: "LSPD",
-  name: "Názov auta",
-  category: "Patrol",
-  price: 40000,
-  image: "images/nazov-fotky.webp",
-  status: "Available",
-  seats: "2-4",
-  speed: "Stredná",
-  usage: "Patrol",
-  description: "Popis vozidla."
-},</code></pre>
-    </section>
+   
 
     <footer class="footer">
       Vehicle Catalog © 2026 · FiveM RP Fleet System
@@ -2192,7 +2173,15 @@
         "fileName": "usms-coach-80k.webp"
     }
 ];
-
+const state = {
+      search: "",
+      department: "all",
+      category: "all",
+      status: "all",
+      sort: "name-asc",
+      page: 1,
+      perPage: 24
+    };
   
 
     const elements = {
